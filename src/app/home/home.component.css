@@ -1,0 +1,90 @@
+.above-header {
+  background-color: #BB0100;
+  width: 100%;
+  padding: 12px 0px;
+  text-align: center;
+}
+.above-header-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav {
+  display: block;
+  text-align: center;
+  justify-content: space-between;
+  background-color: white;
+  min-height: 79px;
+}
+@media (min-width: 1200px) {
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+}
+.nav ul {
+  list-style-type: none;
+}
+.nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+.nav-title {
+  text-decoration: none;
+  width: 178px;
+  height: 45px;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  color: #BB0100;
+  font-size: 30px;
+}
+@media (min-width: 1200px) {
+  .nav-title {
+    margin-left: 100px;
+  }
+}
+.nav .search-fa {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.nav .search-fa .search {
+  position: relative;
+  color: black;
+  font-size: 16px;
+  display: inline-block;
+}
+.nav .search-fa .search input {
+  width: 150px;
+  height: 32px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+.nav .search-fa .search .search-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+@media (min-width: 1200px) {
+  .nav .search-fa {
+    margin-right: 100px;
+    margin-bottom: 0;
+  }
+}
+.nav .search-fa div {
+  align-self: center;
+}
+.nav .search-fa div .icon {
+  padding-left: 20px;
+  color: black;
+}/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,78 @@
+@import '../../helpers/helpers-dir';
+
+.footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding: 0 50px;
+
+    @include breakpoint(lg) {
+        @include px-100;
+    }
+
+    &-details {
+        padding-top: 34px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        letter-spacing: 0em;
+        color: #FFFFFF;
+
+
+        &-title {
+            color: #BB0100;
+        }
+
+        &-mail {
+            background-color: white;
+            max-width: 326px !important;
+            font-weight: bold;
+            margin-top: 34px !important;
+
+            .email-input::placeholder {
+                color: #BB0100;
+            }
+
+        }
+
+        .pt-34 {
+            padding-top: 34px;
+        }
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            margin: 23px;
+            color: white;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 17px;
+                letter-spacing: 0em;
+
+            }
+
+            .first-li {
+                // font-family: Gotham;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 18px;
+                letter-spacing: 0em;
+
+            }
+
+        }
+    }
+
+
+}
+
+.redLine {
+    @include redLine;
+}

@@ -1,0 +1,81 @@
+@import '../../helpers/helpers-dir';
+
+
+.main-div {
+    // margin: 0 50px;
+    // justify-content: center;
+
+    @include breakpoint(md) {
+        margin: 0 50px;
+    }
+
+    // @include breakpoint(md) {
+    //     margin: 0 50px;
+    // }
+
+    // @include breakpoint(lg) {
+    //     margin: 0 50px;
+    // }
+
+    @include breakpoint(xl) {
+        @include mx-100;
+    }
+
+
+    .formOurBlog-cards {
+        justify-content: center;
+        margin-top: 57px;
+        margin-left: 0;
+        margin-right: 0;
+
+
+        .firstcard {
+            text-align: center;
+
+
+
+            .title1 {
+                color: #BB0100;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+                letter-spacing: 0em;
+            }
+
+            .title2 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                font-family: 'Gotham-reg';
+            }
+
+            .details {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-align: center;
+
+            }
+
+
+        }
+
+        .date-title {
+            display: inline-block;
+            width: 83px;
+            height: 83px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .hrL {
+            width: 55%;
+            margin: auto;
+            opacity: 1;
+            margin-bottom: 8px;
+        }
+
+    }
+}

@@ -1,0 +1,13 @@
+<app-headings [heading]="'TRENDING'"
+    [subHeading]="'Explore a wide range of affordable, well-designed and functional home furnishing solutions'"></app-headings>
+<div class="trending row ">
+    <ng-container *ngFor="let item of trendingList; let i = index ">
+        <div class=" trending-image col px-3 py-2 ">
+            <div>
+                <img src="{{item.imgLink}}" class="w-100">
+                <p class="trending-item ">{{item.name}}</p>
+                <p class="text-dark trending-item ">{{item.price|currency:'INR'}}</p>
+            </div>
+        </div>
+    </ng-container>
+</div>

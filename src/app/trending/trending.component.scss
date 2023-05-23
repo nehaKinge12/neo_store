@@ -1,0 +1,26 @@
+@import '../../helpers/helpers-dir';
+
+.trending {
+    margin-top: 57px;
+    justify-content: center;
+    @include mx-100;
+
+    &-image {
+        display: flex;
+        max-width: 240px !important;
+        min-width: 240px !important;
+        color: #7F7F7F;
+    }
+
+    &-item {
+        margin: 0;
+        padding: 0;
+        margin-top: 3px;
+        color: #4F4F4F;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}

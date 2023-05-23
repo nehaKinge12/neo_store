@@ -1,0 +1,32 @@
+.signUp-title {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: linear-gradient(90deg, #FAFAFA 0%, #FFFFFF 98.65%);
+  background-image: url("../../assets/signupfrnewoffer.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+}
+.signUp-title .h6size {
+  font-size: 20px;
+  margin-bottom: 51px;
+}
+.signUp-title .h4size {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.signUp-title .text-center {
+  display: flex;
+  justify-content: center;
+}
+.signUp-title .text-center .email-input input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 13px;
+  padding-right: 224px;
+}
+.signUp-title .text-center .arrow-email {
+  width: 30px;
+  height: 15px;
+}/*# sourceMappingURL=sign-up-offers.component.css.map */

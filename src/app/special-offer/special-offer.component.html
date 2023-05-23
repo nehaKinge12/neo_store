@@ -1,0 +1,31 @@
+<div class="special-offer row m-0">
+    <div class="special-offer-div">
+        <div class="special-offer-border">
+            <div class="special-offer-border-title">
+                <h1 class="special-offer-heading ">SPECIAL OFFER</h1>
+                <button class="special-offer-shop-now">end in 2d : 5h : 26m : 2s</button>
+            </div>
+            <div class="special-offers row">
+                <ng-container *ngFor=" let item of specialOffer">
+                    <div class="special-offers-items m-auto col">
+                        <div class="special-offers-items-div">
+                            <p class="itemName">{{item.name}}</p>
+                            <p class="special-offers-items-price">{{item.price|currency:'INR'}}</p>
+                            <img src="{{item.imgLink}}" class="special-offers-items-images border-rounded-0  ">
+                            <div class="special-offers-items-progress progess" style="height:10px">
+                                <div class="progress-bar bg-success" style="width:40%;height:10px"></div>
+                            </div>
+                            <p class="special-offers-items-available">Available:{{item.Available}}
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star "></span>
+                            </p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

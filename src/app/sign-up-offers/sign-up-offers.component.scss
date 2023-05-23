@@ -1,0 +1,49 @@
+.signUp-title {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: linear-gradient(90deg, #FAFAFA 0%, #FFFFFF 98.65%);
+
+    background-image: url("../../assets/signupfrnewoffer.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+
+
+    .subheading {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+    }
+
+    .heading {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 45px;
+        letter-spacing: 0em;
+    }
+
+    .text-center {
+        display: flex;
+        justify-content: center;
+
+
+        .email-input input {
+            border: none;
+            border-bottom: 1px solid black;
+            padding-bottom: 13px;
+            padding-right: 114px;
+        }
+
+
+        .arrow-email {
+            width: 30px;
+            height: 15px;
+        }
+    }
+
+
+
+
+}

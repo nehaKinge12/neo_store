@@ -1,0 +1,108 @@
+@import '../../helpers/helpers-dir';
+
+.special-offer {
+    justify-content: center;
+
+    @include breakpoint(lg) {
+        margin: 0 50px;
+    }
+
+    @include breakpoint(xl) {
+        @include mx-100;
+    }
+
+    .special-offer-div {
+        display: flex;
+        justify-content: center;
+
+        .special-offer-border {
+            border-color: #E91B1A;
+            margin-top: 110px !important;
+            position: relative;
+
+            @include breakpoint(lg) {
+                border: 2px solid grey;
+                padding: 0 60px;
+            }
+
+            &-title {
+                text-align: center;
+
+                @include breakpoint(lg) {
+                    display: flex;
+                    position: absolute;
+                    top: -30px;
+                    left: 8%;
+                }
+
+                .special-offer-heading {
+                    padding: 7px 12px;
+                    background-color: white;
+                    font-family: Gotham;
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 45px;
+                    letter-spacing: 0em;
+                }
+
+                .special-offer-shop-now {
+                    background-color: #BB0100;
+                    color: white;
+                    border-radius: 2px;
+                    width: 261px;
+                    height: 59px;
+                    border: #BB0100;
+                    padding: 20px 35px;
+                }
+            }
+
+            .special-offers {
+                margin-top: 70px;
+                margin-bottom: 46px;
+                text-align: center;
+
+                .special-offers-items-div {
+                    display: inline-block;
+
+                    .itemName {
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: left;
+                    }
+
+                    .special-offers-items-price {
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: left;
+                    }
+
+                    .special-offers-items {
+                        margin: auto;
+
+                        &-price {
+                            color: #BB0100;
+                            margin-bottom: 23px;
+                        }
+
+                        &-images {
+                            max-width: 330px !important;
+                            min-width: 330px !important;
+                            max-height: 330px !important;
+                            min-height: 330px !important;
+                        }
+
+                        &-progress {
+                            margin-top: 30px;
+                        }
+
+                        &-available {
+                            margin-top: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

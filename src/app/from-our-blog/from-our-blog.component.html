@@ -1,0 +1,25 @@
+<div class="main-div">
+    <app-headings [heading]="'FROM OUR BLOG'"
+        [subHeading]="'See how our customers have styled davici products in their home'"></app-headings>
+    <div class="formOurBlog-cards row image-container">
+        <ng-container *ngFor="let item of blog; let i = index" class="col">
+            <div class="card px-0 mb-3" [ngClass]="i!=0 && i != (blog.length - 1) ? 'mx-3' : ''" style="width:400px">
+                <img class="card-img-top" src="{{item.img}}" alt="Card image" style="width:100%">
+                <div class="card-img-overlay">
+                    <div class="date-title m-1">
+                        <h2>28</h2>
+                        <hr class="hrL">
+                        <h6>NOV</h6>
+                    </div>
+                </div>
+                <div class="card-body firstcard">
+                    <p class="card-titl text-danger title1">{{item.title1}}</p>
+                    <p class="card-text title2">{{item.title2}}</p>
+                    <hr>
+                    <p class="card-text details">{{item.details}} </p>
+                    <a href="#" class="text-dark">{{item.readMore}}</a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

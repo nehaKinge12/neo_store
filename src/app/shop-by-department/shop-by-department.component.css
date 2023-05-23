@@ -1,0 +1,36 @@
+.shopByDepartment-heading {
+  text-align: center;
+  margin-top: 100px;
+}
+.shopByDepartment-description {
+  text-align: center;
+}
+.shopByDepartment .hrLine {
+  width: 10%;
+  margin: auto;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.department {
+  margin-top: 57px;
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: center;
+}
+.department-list {
+  display: flex;
+  max-height: 188px !important;
+  min-height: 188px !important;
+  max-width: 188px !important;
+  min-width: 188px !important;
+  color: #7F7F7F;
+}
+.department-listName {
+  margin-top: 20px;
+  text-align: center;
+}
+.department .selectetd-color {
+  background-color: #BB0100 !important;
+  color: white !important;
+}/*# sourceMappingURL=shop-by-department.component.css.map */

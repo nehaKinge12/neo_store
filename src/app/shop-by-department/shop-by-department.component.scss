@@ -1,0 +1,26 @@
+@import '../../helpers/helpers-dir';
+
+.department {
+    margin-top: 57px;
+    @include mx-100;
+    justify-content: center;
+
+    &-list {
+        display: flex;
+        max-height: 188px !important;
+        min-height: 188px !important;
+        max-width: 188px !important;
+        min-width: 188px !important;
+        color: #7F7F7F;
+    }
+
+    &-listName {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .selectetd-color {
+        background-color: #BB0100 !important;
+        color: white !important;
+    }
+}

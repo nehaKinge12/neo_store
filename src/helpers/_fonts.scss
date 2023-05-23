@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Gotham-reg';
+    src: url('#{$fonts-path-Montserrat}/Gotham-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Gotham-reg';
+    src: url('#{$fonts-path-Montserrat}/Gotham-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Gotham-reg';
+    src: url('#{$fonts-path-Montserrat}/Gotham-Bold.otf') format('opentype');
+    font-weight: 700;
+}

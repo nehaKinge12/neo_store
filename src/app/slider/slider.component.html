@@ -1,0 +1,62 @@
+<!-- <div class="slider">
+    <div class="slider-text">
+        <div class="slider-block">
+            <h1 class="slider-border">Furniture<br> 2022</h1>
+            <h5 class="new-arrivals">NEW ARRIVALS</h5>
+            <p class="spring-collection">SPRING<br>COLLECTION</p>
+            <button class="shop-now">Shop now</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="slider">
+    <button class="slider-button prev-button" (click)="prevSlide()">&#8249;</button>
+    <button class="slider-button next-button" (click)="nextSlide()">&#8250;</button>
+    <div class="slider-item" *ngFor="let image of images; let i = index" [ngClass]="{ 'active': i === currentSlide }">
+        <div class="content">
+            <div class="description" [innerHTML]="image.description"></div>
+            <h5 class="new-arrivals">{{image.newArrival}}</h5>
+            <div class="spring-collection" [innerHTML]="image.springCollection"></div>
+            <button class="shop-now">Shop now</button>
+        </div>
+        <img [src]="image.url" alt="{{ image.title }}" />
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../../assets/Banner.png" style="width:100%">
+        <div class="text">Captionhghghbhbjhhjujhjknbjkkjnkjknkhiuiknkni jhgyujghjgukyghjgkuj</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../../assets/Banner.png" style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../../assets/banner3.png" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div> -->
