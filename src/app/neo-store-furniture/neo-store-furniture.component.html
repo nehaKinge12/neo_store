@@ -1,0 +1,53 @@
+<app-headings [heading]="'#NEOSTOREfurniture'"
+    [subHeading]="'Use #neostore on your post for a chance to be featured! '">
+</app-headings>
+
+<div class="container">
+    <div class="banner">
+        <!-- <div class="banner-img">
+            <swiper [slidesPerView]="5" [spaceBetween]="0" [freeMode]="true" [loop]="true" [autoplay]="{
+              delay: 1000,
+              disableOnInteraction: false
+            }">
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 226.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 228.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 229.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 226.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 226.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 228.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 226.png">
+                </ng-template>
+                <ng-template swiperSlide>
+                    <img src="../../assets/neoStoreFurniture/Rectangle 229.png">
+                </ng-template>
+            </swiper>
+        </div> -->
+
+
+        <div class="banner-img">
+            <swiper [slidesPerView]="5" [spaceBetween]="0" [freeMode]="true" [loop]="true" [autoplay]="{
+              delay: 1000,
+              disableOnInteraction: false
+            }" (swiper)="onSwiper($event)">
+                <ng-template swiperSlide *ngFor="let image of images">
+                    <img [src]="image" swiperZoom (click)="toggleZoom($event)">
+                </ng-template>
+            </swiper>
+        </div>
+
+
+    </div>
+</div>

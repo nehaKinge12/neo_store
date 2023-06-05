@@ -1,0 +1,88 @@
+<app-header></app-header>
+<app-product-header [title]="' Checkout'"></app-product-header>
+<div class="container">
+    <app-checkout-icon></app-checkout-icon>
+
+    <div class="row m-0">
+        <div class="col-12 col-lg-8">
+            <form>
+                <div class="first-section">
+                    <p>1. Shipping address</p>
+                    <div class="row">
+                        <div class="col-lg-6 mb-3">
+                            <input type="text" class="form-control" id="exampleInputName" placeholder="Enter full name">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <input type="number" class="form-control" id="exampleInputContactNo"
+                                placeholder="Enter Phone no">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="exampleInputAddress"
+                            placeholder="Enter Address line 1">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-3">
+                            <input type="text" class="form-control" id="exampleInputLandmark"
+                                placeholder="Enter Landmark">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <input type="number" class="form-control" id="exampleInputPincode"
+                                placeholder="Enter Pincode">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <input type="text" class="form-control" id="exampleInputCity" placeholder="Enter City">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <input type="number" class="form-control" id="exampleInputState" placeholder="Enter State">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control1" id="exampleInputShipping" placeholder="2. Shipping Method">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control1" id="exampleInputBilling" placeholder="3. Billing address">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control1" id="exampleInputPayemt" placeholder="4. Payment">
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-lg-4 coupon-section">
+            <div class="coupen">
+                <p class="coupon-title">Apply coupon</p>
+                <div class="row  apply-view-coupon">
+                    <div class="col-lg-6 apply-coupon">Apply coupon</div>
+                    <div class="col-lg-6 view-coupon">View Coupon</div>
+                </div>
+                <p class="coupon-title">Price Detail</p>
+                <div class="row price-detail">
+                    <div class="col-lg-6">
+                        <p>Total Price</p>
+                        <p>Discount on Price</p>
+                        <p>Coupon</p>
+                        <p>Shipping Charges</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>₹4,650</p>
+                        <p>-₹674</p>
+                        <p>Apply Coupon</p>
+                        <p>₹0.00</p>
+                    </div>
+                </div>
+                <div class="row total-price">
+                    <div class="col-lg-6 total">Total</div>
+                    <div class="col-lg-6 price">₹4,650</div>
+                </div>
+                <div class="row ">
+                    <button type="submit" class="continue1">Back to Shopping Cart</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <app-you-might-like></app-you-might-like>
+    </div>
+</div>

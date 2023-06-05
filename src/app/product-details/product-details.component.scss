@@ -1,0 +1,257 @@
+@import '../../assets/style/helpers/helpers-dir';
+
+.sort-by {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 26px 0px;
+
+    .form-select {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+
+    }
+
+    select {
+        max-width: 150px;
+        width: auto;
+        border-radius: 0px;
+        margin-right: 18.43px;
+        color: $gray-text-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .view {
+        padding-right: 14px;
+    }
+
+    .select-icon {
+        padding-right: 14px;
+    }
+}
+
+.categories {
+    .categories-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-top: 43px;
+        border-bottom: 2px solid black;
+        display: inline-block;
+    }
+
+    .checkOptions {
+        font-size: 16px;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: 24px;
+        color: $gray-text-color;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .rating {
+            color: #FFC107;
+        }
+
+
+    }
+
+
+    .checkOptions input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+
+
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #eee;
+
+
+    }
+
+    #blue {
+        background-color: blue;
+    }
+
+    #orange {
+        background-color: #FF9437;
+    }
+
+    #brown {
+        background-color: #57453B;
+    }
+
+    #green {
+        background-color: #157911;
+    }
+
+    #cream {
+        background-color: #F5EEE1;
+    }
+
+    .checkOptions:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+
+    .checkOptions input:checked~.checkmark {
+        background-color: $red-color;
+        border-radius: 2px;
+        border-color: $red-color;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .checkOptions input:checked~.checkmark:after {
+        display: block;
+    }
+
+    .checkOptions .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .search-wraper {
+        padding: 4px 4px;
+        color: #282627;
+        border-radius: 3px;
+        width: 203px;
+        display: inline-flex;
+        border: 1px solid #BCBDDB;
+
+        input {
+            border: 0;
+            background: transparent;
+            font-size: 14px;
+            width: 100%;
+            padding-right: 6px;
+            font-weight: 300;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .img-button {
+            border: 0;
+            background: transparent;
+        }
+    }
+
+    .checkOptions.select-color {
+        display: inline-flex;
+        margin-right: 19px;
+        padding-left: 23px;
+    }
+
+    .removed-price {
+        color: $red-color;
+    }
+
+}
+
+.product-details {
+    // margin-top: 92px;
+
+    .item-name {
+        padding-top: 12px;
+        margin-bottom: 0px;
+    }
+
+    .original-price {
+        color: #E91B1A;
+    }
+}
+
+.pagination {
+    margin-top: 67px;
+    margin-bottom: 103px;
+
+    button {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+    }
+
+    .pagination,
+    .page-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .pagination {
+        margin-top: 128px;
+    }
+
+    .btn-nav,
+    .btn-page {
+        // border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    .btn-nav {
+        padding: 8px;
+    }
+
+    .btn-nav {
+        width: 42px;
+        height: 42px;
+        color: #223354;
+        border: 0;
+    }
+
+    .btn-nav:hover,
+    .btn-page:hover {
+        background-color: #E91B1A;
+        color: #fff;
+    }
+
+    .btn-page {
+        border: none;
+        width: 43px;
+        height: 43px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 15px;
+        color: #1C1E20;
+    }
+
+    .btn-selected {
+        background-color: #E91B1A;
+        color: #fff;
+    }
+
+}

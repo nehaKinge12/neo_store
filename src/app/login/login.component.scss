@@ -1,0 +1,112 @@
+@import '../../assets/style/helpers/helpers-dir';
+
+
+.image-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .neoStore {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 45px;
+        letter-spacing: 0.05em;
+        color: #BB0100;
+        margin-top: 17px;
+    }
+
+    .image-div1 {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+.form-box {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 15px 2px #0000000F;
+    max-width: 451px;
+    // height: 556px;
+    border-radius: 20px;
+    margin: 56px auto 33px auto;
+    color: #666666;
+    padding: 0px 10px;
+
+}
+
+.heading {
+    text-align: center;
+    padding-top: 62px;
+    margin-bottom: 77px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    color: #E91B1A;
+}
+
+.form-group {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 9px;
+
+    ::placeholder {
+        // font-family: Gotham;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #706A6A
+    }
+
+}
+
+.form-group label {
+    margin-bottom: 11px;
+}
+
+.new-account {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+
+.continue {
+    display: block;
+    margin: 35px auto 39px;
+    background-color: #BB0100;
+    color: white;
+    border-radius: 2px;
+    max-width: 271px;
+    width: 100%;
+    height: 36px;
+    border: #BB0100;
+}
+
+.signUp {
+    text-align: center;
+}
+
+.forget_password {
+    font-family: Gotham;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-right: 40px;
+
+}
+
+.checkbox {
+    margin-left: 40px;
+}

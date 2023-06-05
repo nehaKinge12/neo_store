@@ -1,308 +1,212 @@
-@import '../../helpers/helpers-dir';
+@import '../../assets/style/helpers/helpers-dir';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
-.slider {
-    position: relative;
-    overflow: hidden;
+.swiper {
+    width: 100%;
+    height: 100%;
 
-    .slider-item {
-        display: none;
-        align-items: center;
-        position: relative;
+    .swiper-slide img {
+        width: 100%;
         height: 100%;
-
-        &.active {
-            display: flex;
-        }
-
-        .content {
-            position: absolute;
-            @include ms-100;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            color: #111111;
-            text-align: left;
-            letter-spacing: 0em;
-            font-family: Gotham;
-
-
-
-            h2 {
-                font-size: 24px; // Adjust the font size as needed
-                margin-bottom: 10px;
-            }
-
-            p {
-                font-size: 16px; // Adjust the font size as needed
-            }
-
-            .description {
-                font-size: 40px;
-                font-weight: 400;
-                line-height: 48px;
-                letter-spacing: 0em;
-                margin-bottom: 38px;
-                border-left: 4px solid black;
-                padding-left: 17px;
-            }
-
-            .new-arrivals {
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 24px;
-                letter-spacing: 0em;
-                margin-bottom: 56px;
-            }
-
-            .spring-collection {
-                font-size: 70px;
-                font-weight: 300;
-                line-height: 84px;
-                margin-bottom: 56px;
-            }
-
-            .shop-now {
-                @include shop-now;
-            }
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            min-height: 550px;
-        }
+        // min-height: 400px;
+        object-fit: cover;
     }
 
-    .slider-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 24px;
-        color: black;
-        font-size: 40px;
-        background: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        z-index: 2;
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.banner {
+    position: relative;
+
+    .swiper-button-prev {
+        left: 8px;
+        width: auto;
     }
 
-    .prev-button {
-        padding-left: 59px;
+    .swiper-button-next {
+        right: 8px;
+        width: auto;
     }
 
-    .next-button {
-        padding-right: 59px;
-        right: 0; // Adjust the right position as needed
+    .swiper-button-prev:after {
+        // margin-left: 59.33px;
     }
 
+    .swiper-button-next:after {
+        // margin-right: 59.33px;
+    }
+
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        color: #282627;
+        font-size: 12px;
+        font-weight: 700;
+
+    }
 
 }
 
 
+.banner-content-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1111;
 
+    .description {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 0em;
+        margin-bottom: 38px;
+        border-left: 4px solid black;
+        padding-left: 17px;
+        max-width: 206px;
+    }
 
-// .slider {
-//     background: url('../../assets/Banner.png');
-//     height: 804px;
-//     width: 100%;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     position: relative;
-//     overflow: hidden;
+    .new-arrival {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        padding-bottom: 20pxpx;
+    }
 
-//     &::before,
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         width: 50%;
-//         z-index: -1;
-//         background-repeat: no-repeat;
-//         background-size: cover;
-//     }
+    .spring-collection {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 52px;
+        margin-bottom: 20px;
+        max-width: 100px;
+    }
 
-//     &::before {
-//         left: 0;
-//         background: url('../../assets/Banner.png');
-//         /* Specify the left background image URL */
-//     }
-
-//     &::after {
-//         right: 0;
-//         background: url('../../assets/Banner.png');
-//         /* Specify the right background image URL */
-//         transform: scaleX(-1);
-//         /* Flip the right background image horizontally */
-//     }
-
-//     &-text {
-//         margin-left: 50px;
-
-//         @include breakpoint(xl) {
-//             @include ms-100;
-//         }
-
-//         display: flex;
-//         align-items: center;
-//         height: 100%;
-
-//         .slider-block {
-//             display: block;
-
-//             .slider-border {
-//                 border-left: 4px solid black;
-//                 padding-left: 17px;
-//             }
-
-//             .new-arrivals {
-//                 font-weight: bold;
-//                 margin-top: 30px;
-//                 margin-bottom: 45px;
-//             }
-
-//             .spring-collection {
-//                 font-size: 50px;
-//                 margin-bottom: 45px;
-//             }
-
-//             .shop-now {
-//                 @include shop-now
-//             }
-//         }
-
-//         @include breakpoint(xl) {
-//             .new-arrivals {
-//                 font-weight: bold;
-//                 margin-top: 38px;
-//                 margin-bottom: 56px;
-//             }
-
-//             #spring-collection {
-//                 font-size: 70px;
-//                 margin-bottom: 56px;
-//             }
-
-//         }
-
-//     }
-// }
+    .shop-now {
+        background-color: $background-red-color;
+        color: white;
+        border-radius: 2px;
+        padding: 10px 37px;
+        border-color: $red-color;
+    }
 
 
 
+    @include breakpoint(md) {
+        .description {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0em;
+            margin-bottom: 20px;
+            border-left: 4px solid black;
+            padding-left: 17px;
+            max-width: 206px;
+        }
+
+        .new-arrival {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            padding-bottom: 15px;
+        }
+
+        .spring-collection {
+            font-size: 43px;
+            font-weight: 300;
+            line-height: 62px;
+            margin-bottom: 15px;
+            max-width: 400px;
+        }
+
+        .shop-now {
+            background-color: $background-red-color;
+            color: white;
+            border-radius: 2px;
+            padding: 10px 37px;
+            border-color: $red-color;
+        }
+    }
 
 
-// body {
-//     font-family: Verdana, sans-serif;
-//     margin: 0
-// }
+    @include breakpoint(lg) {
+        .description {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0em;
+            margin-bottom: 20px;
+            border-left: 4px solid black;
+            padding-left: 17px;
+            max-width: 206px;
+        }
 
-// .mySlides {
-//     display: none
-// }
+        .new-arrival {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            padding-bottom: 30px;
+        }
 
-// img {
-//     vertical-align: middle;
-// }
+        .spring-collection {
+            font-size: 55px;
+            font-weight: 300;
+            line-height: 72px;
+            margin-bottom: 30px;
+            max-width: 400px;
+        }
 
-// /* Slideshow container */
-// .slideshow-container {
-//     max-width: 1000px;
-//     position: relative;
-//     margin: auto;
-// }
+        .shop-now {
+            background-color: $background-red-color;
+            color: white;
+            border-radius: 2px;
+            padding: 10px 37px;
+            border-color: $red-color;
+        }
+    }
 
-// /* Next & previous buttons */
-// .prev,
-// .next {
-//     cursor: pointer;
-//     position: absolute;
-//     top: 50%;
-//     width: auto;
-//     padding: 16px;
-//     margin-top: -22px;
-//     color: white;
-//     font-weight: bold;
-//     font-size: 18px;
-//     transition: 0.6s ease;
-//     border-radius: 0 3px 3px 0;
-//     user-select: none;
-// }
 
-// /* Position the "next button" to the right */
-// .next {
-//     right: 0;
-//     border-radius: 3px 0 0 3px;
-// }
+    @include breakpoint(xl) {
+        .description {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0em;
+            margin-bottom: 38px;
+            border-left: 4px solid black;
+            padding-left: 17px;
+            max-width: 206px;
+        }
 
-// /* On hover, add a black background color with a little bit see-through */
-// .prev:hover,
-// .next:hover {
-//     background-color: rgba(0, 0, 0, 0.8);
-// }
+        .new-arrival {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            padding-bottom: 56px;
+        }
 
-// /* Caption text */
-// .text {
-//     color: #f2f2f2;
-//     font-size: 15px;
-//     padding: 8px 12px;
-//     position: absolute;
-//     bottom: 8px;
-//     width: 100%;
-//     text-align: center;
-// }
+        .spring-collection {
+            font-size: 70px;
+            font-weight: 300;
+            line-height: 84px;
+            margin-bottom: 56px;
+            max-width: 400px;
+        }
 
-// /* Number text (1/3 etc) */
-// .numbertext {
-//     color: #f2f2f2;
-//     font-size: 12px;
-//     padding: 8px 12px;
-//     position: absolute;
-//     top: 0;
-// }
+        .shop-now {
+            background-color: $background-red-color;
+            color: white;
+            border-radius: 2px;
+            padding: 10px 37px;
+            border-color: $red-color;
+        }
+    }
 
-// /* The dots/bullets/indicators */
-// .dot {
-//     cursor: pointer;
-//     height: 15px;
-//     width: 15px;
-//     margin: 0 2px;
-//     background-color: #bbb;
-//     border-radius: 50%;
-//     display: inline-block;
-//     transition: background-color 0.6s ease;
-// }
-
-// .active,
-// .dot:hover {
-//     background-color: #717171;
-// }
-
-// /* Fading animation */
-// .fade {
-//     animation-name: fade;
-//     animation-duration: 1.5s;
-// }
-
-// @keyframes fade {
-//     from {
-//         opacity: .4
-//     }
-
-//     to {
-//         opacity: 1
-//     }
-// }
-
-// /* On smaller screens, decrease text size */
-// @media only screen and (max-width: 300px) {
-
-//     .prev,
-//     .next,
-//     .text {
-//         font-size: 11px
-//     }
-// }
+}

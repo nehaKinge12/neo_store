@@ -1,4 +1,4 @@
-@import '../../helpers/helpers-dir';
+@import '../../assets/style/helpers/helpers-dir';
 
 .all-heading {
     margin-top: 100px;
@@ -11,6 +11,7 @@
         font-weight: 700;
         line-height: 45px;
         letter-spacing: 0em;
+        margin-bottom: 0;
     }
 
     .subHeading {
@@ -20,8 +21,6 @@
         letter-spacing: 0em;
         text-align: center;
         color: #7F7F7F;
-
-
     }
 
     .hrLine {

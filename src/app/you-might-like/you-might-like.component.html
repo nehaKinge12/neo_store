@@ -1,0 +1,17 @@
+<app-headings [heading]="'You might also like'"
+    [subHeading]="'From glam vibes to laid-back comfort, these sofas all have one thing in common—and that’s amazing value.  '">
+</app-headings>
+<div class="trending row m-0">
+    <ng-container *ngFor="let item of trendingList; let i = index ">
+        <div class=" trending-image col">
+            <div class="w-100">
+                <a href="#" class="text-decoration-none">
+                    <img src="{{item.imgLink}}" class="w-100">
+                    <p class="trending-item ">{{item.name}}</p>
+                    <p class="text-dark trending-item ">{{item.price}}</p>
+                </a>
+
+            </div>
+        </div>
+    </ng-container>
+</div>

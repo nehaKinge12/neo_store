@@ -1,0 +1,58 @@
+@import '../../assets/style/helpers/helpers-dir';
+
+.new-arrivals {
+
+    padding-top: 100px;
+
+    .new-arrivals-img {
+        position: relative;
+        margin-bottom: 20px;
+        max-height: 260px;
+
+        @include breakpoint(lg) {
+            max-height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .sofa-style-details {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: $white-color;
+
+        .new-arrivals-p {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+            padding-bottom: 24.51px;
+        }
+
+        .shop-now {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+}

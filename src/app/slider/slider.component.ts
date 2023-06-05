@@ -1,76 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import swiper from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination]);
+
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  styleUrls: ['./slider.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SliderComponent implements OnInit {
-
-  // slideIndex = 1;
-
-  images = [
-    {
-      url: '../../assets/Banner.png',
-      title: 'Image 1',
-      description: 'Furniture <br> 2022',
-      newArrival: "NEW ARRIVALS",
-      springCollection: 'SPRING <br> COLLECTION'
-    },
-    {
-      url: '../../assets/banner2.png',
-      title: 'Image 2',
-      description: 'Furniture <br> 2022',
-      newArrival: "NEW ARRIVALS",
-      springCollection: 'SPRING <br> COLLECTION'
-    },
-    {
-      url: '../../assets/banner3.png',
-      title: 'Image 2',
-      description: 'Furniture <br> 2022',
-      newArrival: "NEW ARRIVALS",
-      springCollection: 'SPRING <br> COLLECTION'
-    },
-
-  ];
-
-  currentSlide = 0;
-
-  nextSlide() {
-    this.currentSlide = (this.currentSlide + 1) % this.images.length;
-  }
-
-  prevSlide() {
-    this.currentSlide = (this.currentSlide - 1 + this.images.length) % this.images.length;
-  }
-
-
+  constructor(private router: Router, private route: ActivatedRoute) { }
+  activeSlideIndex: number = 0;
   ngOnInit(): void {
-    //   this.showSlides(this.slideIndex);
+
   }
+  onSwiper(swiper: swiper) {
+    console.log(swiper);
 
-  // plusSlides(n: number) {
-  //   this.showSlides(this.slideIndex += n);
-  // }
-
-  // currentSlide(n: number) {
-  //   this.showSlides(this.slideIndex = n);
-  // }
-
-  // showSlides(n: number) {
-  //   let i;
-  //   let slides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
-  //   let dots = document.getElementsByClassName("dot");
-  //   if (n > slides.length) { this.slideIndex = 1 }
-  //   if (n < 1) { this.slideIndex = slides.length }
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
-  //   slides[this.slideIndex - 1].style.display = "block";
-  //   dots[this.slideIndex - 1].className += " active";
-  // }
+  }
+  onSlideChange(event: any) {
+    console.log('slide change');
+    this.activeSlideIndex = event.activeIndex;
+  }
+  shopNow() {
+    this.router.navigate(['../products'], { relativeTo: this.route });
+  }
 
 }

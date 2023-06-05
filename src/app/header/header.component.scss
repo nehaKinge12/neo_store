@@ -1,0 +1,59 @@
+@import '../../assets/style/helpers/helpers-dir';
+
+.nav-title {
+    text-decoration: none;
+    width: 178px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    color: $red-color;
+    font-size: 30px;
+}
+
+.nav-ul {
+    margin-left: auto;
+
+    .nav-item {
+        font-family: Gotham;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+    }
+}
+
+.search-wraper {
+    background: #EDEDED;
+    padding: 6px 9px;
+    color: #282627;
+    border-radius: 5px;
+    width: 160px;
+    display: inline-flex;
+
+    input {
+        border: 0;
+        background: transparent;
+        font-size: 14px;
+        width: 100%;
+        padding-right: 6px;
+        font-weight: 300;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .img-button {
+        border: 0;
+        background: transparent;
+    }
+}
+
+.image-icon {
+
+    display: inline-block;
+
+    .icon {
+        padding-left: 20px;
+    }
+}

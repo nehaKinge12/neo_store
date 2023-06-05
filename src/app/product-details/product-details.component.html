@@ -1,0 +1,315 @@
+<app-product-header [title]="'Furniture list'"></app-product-header>
+<div class="container overflow-hidden">
+    <div class="row m-0">
+        <div class="sort-by ">
+            <p class="m-0 p-2">Sort By:</p>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Best Match</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <p class="m-0 view">View</p>
+            <img class="select-icon" src="/assets/product/clarity_grid-view-solid.svg">
+            <img src="/assets/product/fa-solid_list.svg">
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="accordion mb-3 d-block d-lg-none" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Filter
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="categories">
+                            <p class="categories-title mt-0">Product Brand</p>
+                            <div class="product-brand">
+                                <label class="checkOptions">Coaster Furniture
+                                    <input type="checkbox" checked="checked" id="coaster-furniture" name="coaster-f"
+                                        value="coaster-f">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">Fusion Dot High Fashion
+                                    <input type="checkbox" id="fusion-dot-high-fashion" name="fusion-d"
+                                        value="fusion-d">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">Unique Furnitture Restor
+                                    <input type="checkbox" id="unique-furnitture-restor" name="unique-f"
+                                        value="unique-f">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">Dream Furnitture Flipping
+                                    <input type="checkbox" id=" dream-furnitture-flipping" name="dream-f"
+                                        value="dream-f">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">Young Repurposed
+                                    <input type="checkbox" id="young-repurposed" name="young-r" value="young-r">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">Green DIY furniture
+                                    <input type="checkbox" id=" green-giy-furniture" name="green-g" value="green-g">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <p class="categories-title">Discount Offer</p>
+                            <div class="discount Offer">
+                                <label class="checkOptions">20% Cashback
+                                    <input type="checkbox" checked="" id="Cashback20%" name="Cashback"
+                                        value="Cashback20%">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">5% Cashback Offer
+                                    <input type="checkbox" id="Cashback5%" name="Cashback" value="Cashback5%">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">25% Discount Offer
+                                    <input type="checkbox" id="Cashback25%" name="Cashback" value="Cashback25%">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <p class="categories-title">Rating Offer</p>
+                            <div class="rating-offer">
+
+                                <label class="checkOptions">
+                                    <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (2341)
+                                    <input type="checkbox" checked="" id="Cashback20%" name="Cashback"
+                                        value="Cashback20%">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">
+                                    <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (1726)
+                                    <input type="checkbox" id="Cashback5%" name="Cashback" value="Cashback5%">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">
+                                    <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (258)
+                                    <input type="checkbox" id="Cashback5%" name="Cashback5%" value="Cashback5%">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">
+                                    <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (25)
+                                    <input type="checkbox" id="Cashback25%" name="Cashback25%" value="Cashback25%">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <p class="categories-title">Price Filter</p>
+                            <div class="price-filter">
+                                <label class="checkOptions">₹0.00 - ₹1500.00
+                                    <input type="checkbox" checked="" id="upto1500" name="upto1500" value="upto1500">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">₹1500.00 - ₹3500.00
+                                    <input type="checkbox" id="upto3500" name="upto3500" value="upto3500%">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">₹3500.00 - ₹5000.00
+                                    <input type="checkbox" id="upto5000" name="upto5000" value="upto5000">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkOptions">₹5000.00 +
+                                    <input type="checkbox" id="from5000" name="from5000" value="from5000">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="search-wraper">
+                                <input type="text" placeholder="₹10.00 `">
+                                <button type="button" class="img-button"><img src="/assets/product/Vector.png"></button>
+                            </div>
+                            <p class="categories-title">Filter By Color</p>
+                            <div class="change-color">
+                                <label class="checkOptions select-color">Blue
+                                    <input type="checkbox" checked="" name="blue" value="blue">
+                                    <span class="checkmark" id="blue"></span>
+                                </label>
+                                <label class="checkOptions select-color">Orange
+                                    <input type="checkbox" name="orange" value="orange">
+                                    <span class="checkmark" id="orange"></span>
+                                </label>
+                                <label class="checkOptions select-color">Brown
+                                    <input type="checkbox" checked="" name="brown" value="brown">
+                                    <span class="checkmark" id="brown"></span>
+                                </label>
+                                <label class="checkOptions select-color">Green
+                                    <input type="checkbox" name="green" value="green">
+                                    <span class="checkmark" id="green"></span>
+                                </label>
+                                <label class="checkOptions select-color">Cream
+                                    <input type="checkbox" name="cream" value="cream">
+                                    <span class="checkmark" id="cream"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-flex col-lg-3 p-0">
+            <div class="categories">
+                <p class="categories-title mt-0">Product Brand</p>
+                <div class="product-brand">
+                    <label class="checkOptions">Coaster Furniture
+                        <input type="checkbox" checked="checked" id="coaster-furniture" name="coaster-f"
+                            value="coaster-f">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">Fusion Dot High Fashion
+                        <input type="checkbox" id="fusion-dot-high-fashion" name="fusion-d" value="fusion-d">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">Unique Furnitture Restor
+                        <input type="checkbox" id="unique-furnitture-restor" name="unique-f" value="unique-f">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">Dream Furnitture Flipping
+                        <input type="checkbox" id=" dream-furnitture-flipping" name="dream-f" value="dream-f">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">Young Repurposed
+                        <input type="checkbox" id="young-repurposed" name="young-r" value="young-r">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">Green DIY furniture
+                        <input type="checkbox" id=" green-giy-furniture" name="green-g" value="green-g">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <p class="categories-title">Discount Offer</p>
+                <div class="discount Offer">
+                    <label class="checkOptions">20% Cashback
+                        <input type="checkbox" checked="" id="Cashback20%" name="Cashback" value="Cashback20%">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">5% Cashback Offer
+                        <input type="checkbox" id="Cashback5%" name="Cashback" value="Cashback5%">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">25% Discount Offer
+                        <input type="checkbox" id="Cashback25%" name="Cashback" value="Cashback25%">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <p class="categories-title">Rating Offer</p>
+                <div class="rating-offer">
+
+                    <label class="checkOptions">
+                        <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (2341)
+                        <input type="checkbox" checked="" id="Cashback20%" name="Cashback" value="Cashback20%">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">
+                        <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (1726)
+                        <input type="checkbox" id="Cashback5%" name="Cashback" value="Cashback5%">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">
+                        <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (258)
+                        <input type="checkbox" id="Cashback5%" name="Cashback5%" value="Cashback5%">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">
+                        <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating> (25)
+                        <input type="checkbox" id="Cashback25%" name="Cashback25%" value="Cashback25%">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <p class="categories-title">Price Filter</p>
+                <div class="price-filter">
+                    <label class="checkOptions">₹0.00 - ₹1500.00
+                        <input type="checkbox" checked="" id="upto1500" name="upto1500" value="upto1500">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">₹1500.00 - ₹3500.00
+                        <input type="checkbox" id="upto3500" name="upto3500" value="upto3500%">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">₹3500.00 - ₹5000.00
+                        <input type="checkbox" id="upto5000" name="upto5000" value="upto5000">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkOptions">₹5000.00 +
+                        <input type="checkbox" id="from5000" name="from5000" value="from5000">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="search-wraper">
+                    <input type="text" placeholder="₹10.00 `">
+                    <button type="button" class="img-button"><img src="/assets/product/Vector.png"></button>
+                </div>
+                <p class="categories-title">Filter By Color</p>
+                <div class="change-color">
+                    <label class="checkOptions select-color">Blue
+                        <input type="checkbox" checked="" name="blue" value="blue">
+                        <span class="checkmark" id="blue"></span>
+                    </label>
+                    <label class="checkOptions select-color">Orange
+                        <input type="checkbox" name="orange" value="orange">
+                        <span class="checkmark" id="orange"></span>
+                    </label>
+                    <label class="checkOptions select-color">Brown
+                        <input type="checkbox" checked="" name="brown" value="brown">
+                        <span class="checkmark" id="brown"></span>
+                    </label>
+                    <label class="checkOptions select-color">Green
+                        <input type="checkbox" name="green" value="green">
+                        <span class="checkmark" id="green"></span>
+                    </label>
+                    <label class="checkOptions select-color">Cream
+                        <input type="checkbox" name="cream" value="cream">
+                        <span class="checkmark" id="cream"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 p-0">
+            <div class="row m-0 product-details">
+                <ng-container *ngFor="let item of products">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <img class="w-100 cursor-pointer" [src]="item.imgLink" routerLink="../product-details">
+                        <p class="item-name">{{item.name}}</p>
+                        <p>{{item.discountedPrice}}
+                            <span class="original-price"><del>{{item.originalPrice}}</del></span>
+                        </p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="float-end">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div> -->
+    <div class="float-end">
+        <div class="pagination">
+            <button class="btn-nav left-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-numbers">
+                <button class="btn-page">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page btn-selected">3</button>
+                <button class="btn-page">4</button>
+                <button class="btn-page">5</button>
+                <button class="btn-page">6</button>
+            </div>
+            <button class="btn-nav right-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+</div>

@@ -1,9 +1,9 @@
-@import '../../helpers/helpers-dir';
+@import '../../assets/style/helpers/helpers-dir';
 
 .footer {
     background-color: black;
     width: 100%;
-    color: white;
+    color: #FFFFFF;
     padding: 0 50px;
 
     @include breakpoint(lg) {
@@ -16,15 +16,14 @@
         font-weight: 300;
         line-height: 17px;
         letter-spacing: 0em;
-        color: #FFFFFF;
-
 
         &-title {
             color: #BB0100;
         }
 
         &-mail {
-            background-color: white;
+            background-color: #FFFFFF;
+
             max-width: 326px !important;
             font-weight: bold;
             margin-top: 34px !important;
@@ -33,6 +32,10 @@
                 color: #BB0100;
             }
 
+        }
+
+        input:focus {
+            outline: none;
         }
 
         .pt-34 {
@@ -46,10 +49,10 @@
         li {
             list-style-type: none;
             margin: 23px;
-            color: white;
+            color: #FFFFFF;
 
             a {
-                color: white;
+                color: #FFFFFF;
                 text-decoration: none;
                 font-size: 14px;
                 font-weight: 300;
@@ -75,4 +78,48 @@
 
 .redLine {
     @include redLine;
+
+    .redLine-text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+    }
 }
+
+.img-logo {
+    .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #7f7f7f;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .facebook-icon:hover {
+        background: #1877f2;
+    }
+
+    .instagram-icon:hover {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    }
+
+    .twitter-icon:hover {
+        background: #1d9bf0;
+    }
+}
+
+.fa-brands {
+    font-size: 40px;
+}
+
+// }
+// .social-media {
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 50px;
+//     background: hsl(0deg, 0%, 50%);
+//     color: hsl(0deg, 0%, 100%);
+//     text-decoration: none;
+// }

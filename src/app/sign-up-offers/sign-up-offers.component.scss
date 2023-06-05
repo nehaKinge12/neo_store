@@ -24,22 +24,36 @@
         letter-spacing: 0em;
     }
 
-    .text-center {
-        display: flex;
-        justify-content: center;
 
 
-        .email-input input {
-            border: none;
-            border-bottom: 1px solid black;
-            padding-bottom: 13px;
-            padding-right: 114px;
+    .search-wraper {
+        width: 100%;
+        padding: 6px 9px;
+        color: #282627;
+        max-width: 426px;
+        border-bottom: 1px solid #000000;
+        display: inline-flex;
+
+        input {
+
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0em;
+            border: 0;
+            background: transparent;
+            width: 100%;
+            padding-right: 6px;
+            padding: 13px
         }
 
+        input:focus {
+            outline: none;
+        }
 
-        .arrow-email {
-            width: 30px;
-            height: 15px;
+        .img-button {
+            border: 0;
+            background: transparent;
         }
     }
 

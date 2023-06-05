@@ -1,0 +1,171 @@
+<app-product-header [title]="'Armen Living Summer Chair'"></app-product-header>
+<div class="container">
+    <div class="row m-0 first-section">
+        <div class="col-12 col-md-6 selected-product row m-0">
+            <div class="d-none d-lg-block col-3">
+                <div class="banner-img">
+                    <!-- <swiper [slidesPerView]="1" [spaceBetween]="10" (swiper)="onSwiper($event)"
+                    (slideChange)="onSlideChange($event)" [navigation]="true" [pagination]="{ clickable: true }"
+                    [scrollbar]="{ draggable: true }"> -->
+                    <swiper [slidesPerView]="3" [spaceBetween]="0" [direction]="'vertical'" [freeMode]="true"
+                        [scrollbar]="{ draggable: true }" [pagination]="{ clickable: true }" class="custom-swiper"
+                        [navigation]="true">
+                        <ng-template swiperSlide>
+                            <img src="../../assets/product/product-detail/slider/image 1180.png">
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <img src="../../assets/product/product-detail/slider/image 1181.png">
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <img src="../../assets/product/product-detail/slider/image 1180.png">
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <img src="../../assets/product/product-detail/slider/image 1181.png">
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <img src="../../assets/product/product-detail/slider/image 1180.png">
+                        </ng-template>
+                    </swiper>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <img class="img-chair" src="../../assets/product/product-detail/chair.png">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 selected-product-info text-center text-md-start">
+            <div class="product-info ">
+                <h4 class="title">Armen Living Summer Chair</h4>
+                <h5 class="price">₹6,450</h5>
+                <p>Price incl. of all taxes</p>
+                <p class="rating"> <ngb-rating [rate]="3" [max]="5" class="rating"></ngb-rating></p>
+                <div class="brand d-inline-block">
+                    <p>Brand: Studio Design
+                        Reference: demo_3
+                        In stock 191 Items
+                    </p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur.</p>
+            </div>
+            <div class="wishlist-product">
+                <p class="choose-color">Choose Color</p>
+                <div class="select-color">
+                    <img src="../../assets/product/product-detail/image 1182.svg">
+                    <img src="../../assets/product/product-detail/image 1184.svg">
+                    <img src="../../assets/product/product-detail/image 1183.svg">
+                    <img src="../../assets/product/product-detail/image 1185.svg">
+                </div>
+                <div class="addTOcART justify-content-center justify-content-md-start">
+                    <button type="submit" class="btn btn-danger continue" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Add To Cart
+                    </button>
+                    <div class="cart-count">{{count}}
+                    </div>
+                    <div class="count-update">
+                        <button class="increase" (click)="increase()"><i class="fa-solid fa-chevron-up"></i></button>
+                        <button class="decrease" (click)="decrease()"><i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+
+                </div>
+                <div class="add-to-wishlist">
+                    <img src="../../assets/product/product-detail/wishlist.svg">
+                    <span class="pe-3"> Add to Wishlist</span>
+                    <img class="pe-1" src="../../assets/product/product-detail/share.svg">
+                    <span>Share this</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row second-section">
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">DESCRIPTION</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false">ADDITIONAL
+                    INFORMATION</button>
+                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                    type="button" role="tab" aria-controls="nav-contact" aria-selected="false">REVIEWS (5)</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra massa. Tincidunt augue interdum
+                velit euismod in pellentesque massa placerat. Pharetra diam sit amet nisl suscipit adipiscing Ut sem
+                viverra aliquet eget sit amet tellus cras adipiscing. Nullam eget felis eget nunc lobortis mattis.Nisi
+                vitae suscipit tellus mauris. Facilisi nullam vehicula ipsum.
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Turpis egestas sed tempus urna et pharetra pharetra massa. Tincidunt augue interdum velit
+                euismod in pellentesque massa placerat. Pharetra diam sit amet nisl suscipit adipiscing Ut sem viverra
+                aliquet eget sit amet tellus cras adipiscing. Nullam eget felis eget nunc lobortis mattis.Nisi vitae
+                suscipit tellus mauris. Facilisi nullam vehicula ipsum.
+
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
+        </div>
+
+    </div>
+    <div class="you-might-like">
+        <app-you-might-like></app-you-might-like>
+    </div>
+
+
+</div>
+
+
+<!-- modal popup -->
+<div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Product successfully added to your shopping cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row-m-0 d-flex">
+                <div class="col-lg-5">
+                    <img src="../assets/product/popup.png">
+                </div>
+                <div class="col-lg-7 ">
+                    <div class="modal-description">
+                        <h4>Armen Living Summer Chair</h4>
+                        <h4>Item: MB494</h4>
+                        <h4>Size: 40X60 cm</h4>
+                        <div class="price-quantity d-flex">
+                            <h4 class="mb-0">Price:<span class="original-price"><del> ₹4,499</del></span> ₹3,825</h4>
+
+                            <select class="form-select dropdown-btn" aria-label="Default select example">
+                                <option selected>Qty: 1</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <p class="para">Threshold Delivery - additional cost per unit: ₹400.00
+                            In-stock Usually ships in 1-7 business days.
+                        </p>
+                        <p class="para">*Price does not include shipping and processing, gift wrap, discounts or taxes
+                        </p>
+                    </div>
+                    <div class="continue-btn">
+                        <button type="submit" class="btn btn-danger continue mb-2">Checkout</button>
+                        <button type="submit" class="btn btn-danger continue">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->

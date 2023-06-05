@@ -1,4 +1,4 @@
-@import '../../helpers/helpers-dir';
+@import '../../assets/style/helpers/helpers-dir';
 
 .special-offer {
     justify-content: center;
@@ -7,21 +7,22 @@
         margin: 0 50px;
     }
 
-    @include breakpoint(xl) {
-        @include mx-100;
-    }
+    // @include breakpoint(xl) {
+    //     @include mx-100;
+    // }
 
     .special-offer-div {
         display: flex;
         justify-content: center;
+        padding: 0;
 
         .special-offer-border {
-            border-color: #E91B1A;
             margin-top: 110px !important;
             position: relative;
+            width: 100%;
 
             @include breakpoint(lg) {
-                border: 2px solid grey;
+                border: 1px solid #E91B1A;
                 padding: 0 60px;
             }
 
@@ -29,16 +30,15 @@
                 text-align: center;
 
                 @include breakpoint(lg) {
-                    display: flex;
-                    position: absolute;
-                    top: -30px;
-                    left: 8%;
+                    display: inline-flex;
+                    transform: translate(8%, -50%);
+                    background-color: white;
+                    padding-right: 15px;
                 }
 
                 .special-offer-heading {
                     padding: 7px 12px;
                     background-color: white;
-                    font-family: Gotham;
                     font-size: 30px;
                     font-weight: 700;
                     line-height: 45px;
@@ -62,47 +62,87 @@
                 text-align: center;
 
                 .special-offers-items-div {
-                    display: inline-block;
-
-                    .itemName {
-                        font-size: 20px;
-                        font-weight: 500;
-                        line-height: 24px;
-                        text-align: left;
-                    }
-
-                    .special-offers-items-price {
-                        font-size: 20px;
-                        font-weight: 500;
-                        line-height: 24px;
-                        text-align: left;
-                    }
+                    min-width: 285px;
+                    max-width: 350px;
 
                     .special-offers-items {
+                        display: inline-block;
                         margin: auto;
+
+                        .itemName {
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 24px;
+                            text-align: left;
+                        }
 
                         &-price {
                             color: #BB0100;
                             margin-bottom: 23px;
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 24px;
+                            text-align: left;
                         }
 
                         &-images {
-                            max-width: 330px !important;
-                            min-width: 330px !important;
-                            max-height: 330px !important;
-                            min-height: 330px !important;
+                            width: 100%;
+                            // max-width: 330px !important;
+                            // min-width: 330px !important;
+                            // max-height: 330px !important;
+                            // min-height: 330px !important;
                         }
 
                         &-progress {
                             margin-top: 30px;
+                            background-color: #EDEDED;
+                            border-radius: 5px;
+
+                            .progress-bar {
+                                border-radius: 5px;
+                            }
                         }
 
                         &-available {
                             margin-top: 18px;
+
+                            .rating {
+                                color: #BFBFBF;
+                                font-size: 20px;
+                            }
                         }
+
                     }
                 }
             }
         }
     }
+}
+
+.average-rating {
+    position: relative;
+    appearance: none;
+    color: transparent;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    font-size: 25px;
+}
+
+
+.average-rating::before {
+    --percent: calc(3.5/5*100%);
+    content: '★★★★★';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, gold var(--percent), rgba(0, 0, 0, 0.2) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.checked {
+    color: yellow;
 }

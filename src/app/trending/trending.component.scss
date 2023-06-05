@@ -1,15 +1,16 @@
-@import '../../helpers/helpers-dir';
+@import '../../assets/style/helpers/helpers-dir';
 
 .trending {
     margin-top: 57px;
     justify-content: center;
-    @include mx-100;
+    // @include mx-100;
 
     &-image {
         display: flex;
-        max-width: 240px !important;
-        min-width: 240px !important;
+        max-width: 245px;
+        min-width: 245px;
         color: #7F7F7F;
+        padding: 10px;
     }
 
     &-item {

@@ -1,6 +1,6 @@
-<div class="main-div">
-    <app-headings [heading]="'FROM OUR BLOG'"
-        [subHeading]="'See how our customers have styled davici products in their home'"></app-headings>
+<app-headings [heading]="'FROM OUR BLOG'"
+    [subHeading]="'See how our customers have styled davici products in their home'"></app-headings>
+<div class="container">
     <div class="formOurBlog-cards row image-container">
         <ng-container *ngFor="let item of blog; let i = index" class="col">
             <div class="card px-0 mb-3" [ngClass]="i!=0 && i != (blog.length - 1) ? 'mx-3' : ''" style="width:400px">
@@ -17,7 +17,7 @@
                     <p class="card-text title2">{{item.title2}}</p>
                     <hr>
                     <p class="card-text details">{{item.details}} </p>
-                    <a href="#" class="text-dark">{{item.readMore}}</a>
+                    <p><a href="#" class="text-dark">{{item.readMore}}</a></p>
                 </div>
             </div>
         </ng-container>

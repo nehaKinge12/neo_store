@@ -1,13 +1,16 @@
 <app-headings [heading]="'SHOP BY DEPARTMENT'"
     [subHeading]="'Sitewide Discounts & Savings of up to 25%'"></app-headings>
-<div class="department row">
-    <ng-container *ngFor="let item of departMentList">
-        <div class="department-list col border border-2 border-dark m-2"
-            [ngClass]="selectedItem.name == item.name ? 'selectetd-color' : ''" (click)="selectedItem = item">
-            <div class="m-auto">
-                <img src="{{item.imgLink}}">
-                <h5 class="department-listName">{{item.name}}</h5>
+<div class="container">
+    <div class="department row m-0">
+        <ng-container *ngFor="let item of departMentList">
+            <div class="department-list col m-2" [ngClass]="selectedItem.name == item.name ? 'selectetd-color' : ''"
+                (click)="selectedItem = item">
+                <div class="m-auto dept-block">
+                    <img class="dept-img" src="{{item.imgLink}}">
+                    <img class="dept-imgWhite" src="{{item.imgLinkWhite}}">
+                    <h5 class="department-listName">{{item.name}}</h5>
+                </div>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
+    </div>
 </div>
