@@ -1,0 +1,99 @@
+@mixin breakpoint($class) {
+
+    @if $class ==xs {
+        @media (max-width: 575px) {
+            @content;
+        }
+    }
+
+    @else if $class ==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $class ==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $class ==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $class ==xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $class ==xxl {
+        @media (min-width: 1400px) {
+            @content;
+        }
+    }
+
+
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+@mixin mx-100 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+@mixin ms-100 {
+    margin-left: 100px;
+}
+
+@mixin me-100 {
+    margin-right: 100px;
+}
+
+@mixin px-100 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+@mixin shop-now {
+    background-color: #BB0100;
+    color: white;
+    border-radius: 2px;
+    width: 145px;
+    height: 36px;
+    border: #BB0100;
+}
+
+@mixin hrLine {
+    width: 10%;
+    margin: auto;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+@mixin redLine {
+    width: 100%;
+    height: 44px;
+    background: #BB0100;
+    color: white;
+}
+
+// $fonts-path-Montserrat: "../assets/font/Gotham" !default;
+
+// @font-face {
+//     font-family: 'Gotham-reg';
+//     src: url('#{$fonts-path-Montserrat}/Gotham-Light.otf') format('opentype');
+//     font-weight: 300;
+// }
+
+// @font-face {
+//     font-family: 'Gotham-reg';
+//     src: url('#{$fonts-path-Montserrat}/Gotham-Medium.otf') format('opentype');
+//     font-weight: 500;
+// }
